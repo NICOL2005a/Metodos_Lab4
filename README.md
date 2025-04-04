@@ -39,7 +39,27 @@ static void cargarContactos(Contacto **lista, int *contador, const char *filenam
 
 ---
 
+#### ✅ **3. Uso del método `static` en el código de `agendaAlternativo.txt`**
+
+En el archivo `agendaAlternativo.txt`, el uso de métodos `static` está **restringido principalmente a la clase `AgendaUI`**, que actúa como **interfaz de usuario**. Ejemplo:
+
+```java
+public class AgendaUI {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        StudentAgenda agenda = new StudentAgenda();
+        // Menú principal del programa...
+    }
+}
+```
+
+🟢 **Explicación:** El método main es estático porque es el punto de entrada de la aplicación y debe poder ejecutarse sin necesidad de instanciar un objeto de AgendaUI. Fuera de eso, el resto del programa evita usar static, ya que sigue una estructura orientada a objetos: los datos (alumnos) y la lógica se manejan a través de instancias de clase (StudentAgenda, Student).
+
+🔍 Diferencia clave con otras implementaciones: En lugar de tener muchos métodos estáticos como en un diseño más estructurado o funcional, agendaAlternativo.txt apuesta por la instanciación de objetos, lo que mejora la modularidad, encapsulamiento y reutilización del código.
 ### 🌟 **Conclusión**
+
+---
+
 📌 **Java** y **C++** utilizan `static` para definir métodos y funciones que no dependen de instancias específicas.
 📌 En **Java**, se usa para evitar la creación innecesaria de objetos.
 📌 En **C++**, ayuda a restringir el alcance de las funciones dentro de un archivo fuente.
