@@ -56,9 +56,10 @@ public class AgendaUI {
 🟢 **Explicación:** El método main es estático porque es el punto de entrada de la aplicación y debe poder ejecutarse sin necesidad de instanciar un objeto de AgendaUI. Fuera de eso, el resto del programa evita usar static, ya que sigue una estructura orientada a objetos: los datos (alumnos) y la lógica se manejan a través de instancias de clase (StudentAgenda, Student).
 
 🔍 Diferencia clave con otras implementaciones: En lugar de tener muchos métodos estáticos como en un diseño más estructurado o funcional, agendaAlternativo.txt apuesta por la instanciación de objetos, lo que mejora la modularidad, encapsulamiento y reutilización del código.
-### 🌟 **Conclusión**
 
 ---
+
+### 🌟 **Conclusión**
 
 📌 **Java** y **C++** utilizan `static` para definir métodos y funciones que no dependen de instancias específicas.
 📌 En **Java**, se usa para evitar la creación innecesaria de objetos.
